@@ -1,0 +1,23 @@
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $onyx;
+}
+
+form {
+  > * {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  > input[type="text"],
+  > input[type="email"],
+  > input[type="password"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,123 @@
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  display: flex;
+  flex-direction: column;
+  border-right: 1rem solid $snow;
+  padding: 1rem;
+  color: $grey;
+  @media only screen and (max-width: $bp-1000) {
+    border-right: none;
+    grid-column: center-start / center-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__top {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: $dark-pink;
+    @media only screen and (max-width: $bp-1000) {
+      margin-bottom: 0;
+      font-size: 1.5rem;
+    }
+    @media only screen and (max-width: $bp-350) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__logo {
+    width: 6rem;
+    @media only screen and (max-width: $bp-1000) {
+      width: 5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__nav {
+    margin-bottom: auto;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    &-link {
+      text-decoration: none;
+      color: currentColor;
+      font-size: 1.4rem;
+      width: 100%;
+      &--one {
+        order: 2;
+      }
+      &--two {
+        order: 4;
+      }
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: transparent;
+    transition: all 0.3s;
+    &--one {
+      order: 1;
+    }
+    &--two {
+      order: 3;
+    }
+  }
+  &__nav &__nav-link:hover + &__icon {
+    fill: $pink;
+  }
+  &__nav &__nav-link.active + &__icon {
+    fill: $pink;
+  }
+
+  &__shelf-list {
+    list-style: none;
+    grid-column: 1 / -1;
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    > a {
+      text-decoration: none;
+      color: currentColor;
+      text-align: right;
+      transition: all 0.3s;
+      &.active,
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $pink;
+        color: white;
+      }
+    }
+  }
+
+  &__bottom {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: center;
+  }
+  &__email {
+    display: inline-block;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    > * {
+      display: block;
+    }
+  }
+  &__burger {
+    height: 5rem;
+    width: 5rem;
+    fill: $pink;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

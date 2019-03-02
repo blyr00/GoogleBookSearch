@@ -1,0 +1,69 @@
+.btn {
+  font-family: inherit;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &--logout {
+    background-color: $snow;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+    &:hover {
+      color: $snow;
+      background-color: $grey;
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(black, 0.1);
+    }
+    &:active,
+    &:focus {
+      transform: translateY(0);
+      box-shadow: 0 1rem 2rem rgba(black, 0.05);
+    }
+  }
+  &--signup {
+    cursor: pointer;
+    border: none;
+    background-color: $dark-pink;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $pink;
+    }
+  }
+  &--login {
+    cursor: pointer;
+    border: none;
+    background-color: darken($green, 20%);
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $green;
+    }
+  }
+  &--example {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: $snow;
+    color: $light-pink;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+}
